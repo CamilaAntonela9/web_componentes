@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Camila Store - Componentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <style>
+        header {
+            background-color: black;
+            color: rgb(255, 170, 0);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main {
+            padding: 2rem;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        body{
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Comidas Rápidas: Camila :D</h2>
+    </header>
+
+    <main class="container">
+        <tarjeta-comida tema="oscuro">
+            <span slot="titulo">Hamburguesa</span>
+           <img slot="imagen"  src="https://img.freepik.com/fotos-premium/hamburguesa-queso-papas-fritas_67473-4.jpg" alt="" width="150px" height="150px">
+            <span slot="descripcion">Una deliciosa hamburguesa con queso y papas.</span>
+        </tarjeta-comida>
+
+        <tarjeta-comida tema="claro">
+            <span slot="titulo">Pizza</span>
+           <img slot="imagen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHZUWE3JCM3NtglWT7w60Am198kAZRRcwRng&s" alt="">
+            <span slot="descripcion">Pizza de pepperoni con extra queso.</span>
+        </tarjeta-comida>
+    </main>
+
+    <script type="module" src="./componente.js"></script>
+</body>
+</html>
