@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Camila Store - Componentes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" />
+  <style>
+    header {
+      background-color: black;
+      color: rgb(237, 237, 236);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      padding: 2rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    body {
+      background-color: orangered;
+    }
+
+    formulario-accion {
+      width: 100%;
+      max-width: 400px;
+      border-color: solid 1px green;
+    }
+   
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>Comidas Rápidas: Camila :D</h2>
+  </header>
+
+  <main class="container">
+    <!-- Componente de la Tarea 1 -->
+    <tarjeta-comida id="producto" tema="oscuro">
+      <span slot="titulo">Hamburguesa</span>
+      <img slot="imagen" src="https://img.freepik.com/fotos-premium/hamburguesa-queso-papas-fritas_67473-4.jpg"
+        alt="Hamburguesa" width="150px" height="150px" />
+      <span slot="descripcion">Una deliciosa hamburguesa con queso y papas.</span>
+    </tarjeta-comida>
+    <formulario-accion>
+      <form slot="formulario" class="p-3 bg-light rounded">
+        <div class="form-group">
+          <label for="nombre">Nombre del Producto</label>
+          <input type="text" id="nombre" class="form-control" placeholder="Ej. Pizza" required />
+        </div>
+        <div class="form-group">
+          <label for="precio">Precio</label>
+          <input type="number" id="precio" class="form-control" placeholder="Ej. 12.99" required />
+        </div>
+        <div class="form-group">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" class="form-control" rows="3" placeholder="Describe el producto..."
+            required></textarea>
+        </div>
+        <button slot="boton-enviar" class="btn btn-warning btn-block mt-2">Enviar</button>
+      </form>
+    </formulario-accion>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="./componente.js"></script> <!-- Tarea 1 -->
+  <script type="module" src="/formularioAccion.js"></script> <!-- Tarea 2 -->
+</body>
+
+</html>
