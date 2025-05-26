@@ -32,7 +32,7 @@ class FormularioAccion extends HTMLElement {
           border: 1px solid green;
           border-radius: 5px;
 
-       }
+       }nnnmnmm
       </style>
       <form id="formulario">
         <label for="nombre">Nombre del Producto:</label>
